@@ -34,3 +34,14 @@ mapa_romenia = {
 'Iasi': [('Vaslui', 92), ('Neamt', 87)],
 'Neamt': [('Iasi', 87)],
 }
+
+# ----- PASSO 2: a heurística como outro dicionário -----
+# Chave = cidade, Valor = distância em linha reta (km) daquela cidade até Bucareste
+
+heuristica_bucareste = {
+'Arad': 366, 'Bucharest': 0, 'Craiova': 160, 'Drobeta': 242, 'Eforie': 161,
+'Fagaras': 176, 'Giurgiu': 77, 'Hirsova': 151, 'Iasi': 226, 'Lugoj': 244,
+'Mehadia': 241, 'Neamt': 234, 'Oradea': 380, 'Pitesti': 100,
+'Rimnicu Vilcea': 193, 'Sibiu': 253, 'Timisoara': 329, 'Urziceni': 80,
+'Vaslui': 199, 'Zerind': 374,
+}
