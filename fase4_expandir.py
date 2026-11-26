@@ -39,7 +39,6 @@ inicio = 'Arad'
 fronteira = [(heuristica_bucareste[inicio], 0, inicio, [inicio])]
 explorados = set()
 
-
 # ----- PASSO 5: repetir três rodadas à mão (ainda sem while) -----
 
 for rodada in [1, 2, 3]:
