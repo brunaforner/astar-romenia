@@ -25,5 +25,37 @@ f_atual, g_atual, cidade_atual, caminho = no
 print()
 print('Nó retirado:', no)
 print(' f =', f_atual, '| g =', g_atual, '| cidade =', cidade_atual,
- '| caminho =', caminho)
+     '| caminho =', caminho)
 print('Fronteira agora:', fronteira)
+
+
+# ----- PASSO 4: gerar os filhos (vizinhos) do nó retirado -----
+
+for vizinho, custo_estrada in mapa_romenia[cidade_atual]:
+    novo_g = g_atual + custo_estrada
+    novo_h = heuristica_bucareste[vizinho]
+    novo_f = novo_g + novo_h
+    novo_caminho = caminho + [vizinho]
+    fronteira.append((novo_f, novo_g, vizinho, novo_caminho))
+
+print()
+print('Fronteira depois de expandir Arad (ordem de inserção):')
+for item in fronteira:
+    print(' ', item)
+
+
+# ----- PASSO 5: ordenar a fronteira pelo f -----
+
+fronteira.sort(key=lambda no: no[0])
+print()
+print('Fronteira ordenada pelo f (posição 0 da tupla):')
+for item in fronteira:
+    print(' ', item)
+
+
+# ----- PASSO 6: o próximo nó a ser expandido -----
+
+proximo = fronteira.pop(0)
+print()
+print('Próximo nó a expandir:', proximo[2], 'com f =', proximo[0])
+
